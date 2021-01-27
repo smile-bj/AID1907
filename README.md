@@ -20,8 +20,7 @@ echo 'url: https://github.com/mongodb/mongo.git' >  m/mongo/mongo
 第一步：采用Pull Request的方式将适配好的测试用例添加到compass-ci仓库下面的 sbin/auto_submit.yaml 文件中。
 如何适配测试用例到compass-ci请参考：
 
-	https://gitee.com/EmmaLee/lkp-tests/blob/master/doc/add-testcase.md
-
+	[add-testcase.md](https://gitee.com/EmmaLee/lkp-tests/blob/master/doc/add-testcase.md)
 第二步：将所有的接口文件通过Pull Request的方式迁移到compass-ci后，在 auto_submit.yaml 中补充测试参数：
 ```
 echo "$repo/$repo: os=openeuler" >> auto_submit.yaml
