@@ -63,13 +63,18 @@ submit cci-makepkg.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
 
 ### mysql-server结果解析脚本内容详见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/stats/mysql-server]
 
-## 3.4 提交测试任务,如果你的测试用例对客户端的lkp-tests 做了更改，需要使用 -a 选项来适配。将客户端的 lkp-tests 下做的更改，同步到服务端，并在测试机上生成你的测试脚本,更多内容请参考[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.zh.md]
+## 3.4 提交测试任务
+
+### 如果你的测试用例对客户端的lkp-tests 做了更改，需要使用 -a 选项来适配。将客户端的 lkp-tests 下做的更改，同步到服务端，并在测试机上生成你的测试脚本,更多内容请参考[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.zh.md]
 
 ```
 submit -a mysql-server.yaml testbox=vm-2p8g
 ```
+## 3.5 查看测试结果
 
-## 3.5 MySQL测试指标：
+### 可通过可登陆到[https://compass-ci.openeuler.org/jobs] 页面查该任务执行结果
+
+## 3.6 MySQL测试指标：
 
 Transactions: --总事务数/秒
 一台数据库服务器在单位时间内处理梳理事务的个数。
