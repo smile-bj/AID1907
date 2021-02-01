@@ -12,30 +12,42 @@ CentOS			8.1
 
 ## 1.1 制作作自定义的rootfs:
 
-# 2. compass-ci提供丰富的依赖包，详情见
-
+# 2. compass-ci提供丰富的依赖包，详情见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/distro/depends/lkp]
 
 ## 2.1 如何添加测试所需的依赖包
 
-### 以netperf举例，用户可通过在lkp-tests/distro/depends/下不同OS添加netperf及netperf-dev文件
-netperf文件为本次测试过程所需的依赖：
+### 以mysql为例，用户可通过在lkp-tests/distro/depends/下不同OS添加mysql-server文件
+mysql-server文件为本次测试过程所需的依赖：
 ```
-libsctpl
-lksctp-tools
-ethtool
+mysql-server
+mysql-testsuite
 ```
-netperf-dev文件为构建netperf包提供依赖
+### 执行如下命令提交构建依赖包任务，如何提交测试任务详见[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.en.md]
 ```
-libsctp-dev
+submit cci-depends.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
 ```
-### 提交cci-depends.yaml, 如何提交测试任务详见[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.en.md]
+### 可登陆到https://compass-ci.openeuler.org/jobs/页面查该任务是否成功
 
 ## 2.2 如何添加测试软件包 
+
+### 以mysql为例，用户可通过在lkp-tests/distro/depends/下不同OS添加mysql-dev文件
+mysql-dev文件为构建测试过程所需的依赖：
+```
+gcc
+cmake
+libssl-dev
+libncurses5-dev
+libtirpc-dev
+```
 
 ### 编写pkgbuild(注：pkgbuild可来源于代码库上直接下载，也可个人编写)：
 [如何编写PKGBUILD][https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/write-PKGBUILD.zh.md]
 
-### 提交cci-makepkg.yaml, [如何提交测试任务详见][https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.en.md]
+### 执行如下命令提交构建依赖包任务
+
+```
+submit cci-makepkg.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
+```
 
 # 3. MySQL测试
 
