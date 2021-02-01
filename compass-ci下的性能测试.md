@@ -8,6 +8,7 @@ OS version: openEuler 20.03, openEuler 20.09, CentOS 7.6, CentOS 8.1
 
 ## 1.1 制作作自定义的rootfs:
 定制rootfs
+
         1. 使用chroot命令切换到 rootfs (此步骤需要 root 权限)
             ```bash
             chroot openEuler-rootfs
@@ -23,11 +24,11 @@ OS version: openEuler 20.03, openEuler 20.09, CentOS 7.6, CentOS 8.1
 			>	3. 使用 yum 进行安装
 			>	4. 删除 docker 环境变量文件
 
-   3. 退出 rootfs，并打包
-        ```bash
-        cd $rootfs
-        find . | coip -o -Hnewc |gzip -9 > $os_name.cgz
-        ```
+       3. 退出 rootfs，并打包
+         ```bash
+         cd $rootfs
+         find . | coip -o -Hnewc |gzip -9 > $os_name.cgz
+         ```
 
 # 2. compass-ci提供丰富的依赖包
 
