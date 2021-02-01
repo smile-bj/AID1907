@@ -49,9 +49,13 @@ submit cci-makepkg.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
 
 # 3. MySQL测试
 
-## 3.1 通过submit方式提交job.yaml，提交完成后等待测试完成
+## 3.1 编写yaml文件
 
-## 3.2  登录到 https://compass-ci.openeuler.org/jobs/页面
+### mysql-server.yaml内容详见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/jobs/mysql-server.yaml]
+
+### 如何编写yaml文件，内容参见[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/tutorial.md]
+
+## 3.2  编写测试脚本
 
 ## 3.3 根据submit返回的job_id找到任务，在job_state列点击finished/failed进入到结果页面
 
