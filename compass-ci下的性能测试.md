@@ -14,7 +14,7 @@ lkp依赖包[https://gitee.com/wu_fengguang/lkp-tests/blob/master/distro/depends
 
 ## 2.1 如何添加测试所需的依赖包
 
-### 以mysql为例，用户可通过在lkp-tests/distro/depends/下不同OS添加mysql-server文件
+### 以mysql为例，在lkp-tests/distro/depends/下添加mysql-server文件
 mysql-server文件为本次测试过程所需的依赖：
 ```
 mysql-server
@@ -24,11 +24,11 @@ mysql-testsuite
 ```
 submit cci-depends.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
 ```
-### 可登陆到https://compass-ci.openeuler.org/jobs/页面查该任务是否成功
+### 可登陆到[https://compass-ci.openeuler.org/jobs]页面查该任务是否成功
 
 ## 2.2 如何添加测试软件包 
 
-### 以mysql为例，用户可通过在lkp-tests/distro/depends/下不同OS添加mysql-dev文件
+### 以mysql为例，在lkp-tests/distro/depends/下添加mysql-dev文件
 mysql-dev文件为构建测试过程所需的依赖：
 ```
 gcc
