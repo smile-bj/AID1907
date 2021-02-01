@@ -4,15 +4,13 @@
 
 # 1. 目前compass-ci提供的OS镜像
 
-OS                      version
-openEuler               20.03
-oepnEuler		20.09
-CentOS			7.6
-CentOS			8.1
+OS version: openEuler 20.03, openEuler 20.09, CentOS 7.6, CentOS 8.1
 
 ## 1.1 制作作自定义的rootfs:
 
-# 2. compass-ci提供丰富的依赖包，详情见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/distro/depends/lkp]
+# 2. compass-ci提供丰富的依赖包
+
+lkp依赖包[https://gitee.com/wu_fengguang/lkp-tests/blob/master/distro/depends/lkp]
 
 ## 2.1 如何添加测试所需的依赖包
 
