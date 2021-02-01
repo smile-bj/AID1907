@@ -57,9 +57,17 @@ submit cci-makepkg.yaml benchmark=mysql-server os_mount=cifs testbox=vm-2p8g
 
 ## 3.2  编写测试脚本
 
-## 3.3 根据submit返回的job_id找到任务，在job_state列点击finished/failed进入到结果页面
+### mysql-server测试脚本内容详见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/tests/mysql-server]
 
-## 3.4 找到任务同名的文件打开如下：
+## 3.3 编写结果解析脚本
+
+### mysql-server结果解析脚本内容详见[https://gitee.com/wu_fengguang/lkp-tests/blob/master/stats/mysql-server]
+
+## 3.4 提交测试任务,如果你的测试用例对客户端的lkp-tests 做了更改，需要使用 -a 选项来适配。将客户端的 lkp-tests 下做的更改，同步到服务端，并在测试机上生成你的测试脚本,更多内容请参考[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.zh.md]
+
+```
+submit -a mysql-server.yaml testbox=vm-2p8g
+```
 
 ## 3.5 MySQL测试指标：
 
