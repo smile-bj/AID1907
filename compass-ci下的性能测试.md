@@ -28,7 +28,7 @@ netperf-dev文件为构建netperf包提供依赖
 ```
 libsctp-dev
 ```
-### 提交cci-depends.yaml, [如何提交测试任务详见][https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.en.md]
+### 提交cci-depends.yaml, 如何提交测试任务详见[https://gitee.com/wu_fengguang/compass-ci/blob/master/doc/manual/submit-job.en.md]
 
 ## 2.2 如何添加测试软件包 
 
